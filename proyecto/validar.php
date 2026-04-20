@@ -25,7 +25,8 @@ $sql = "SELECT * FROM login WHERE usuario='$usuario' AND password='$contrasena'"
 $result = $conn->query($sql);
 if ($result->num_rows == 1) {
  // Inicio de sesión exitoso
- echo "Inicio de sesión exitoso. Bienvenido, $usuario.";
+ header('Location:index2.html');
+    exit;
 } else {
  // Error en las credenciales
  echo "Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.";
